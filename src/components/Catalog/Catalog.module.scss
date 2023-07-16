@@ -1,0 +1,31 @@
+.catalog {
+  margin-top: 40px;
+  min-height: 100vh;
+  &Top {
+    display: flex;
+    justify-content: space-between;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  &Search {
+    position: relative;
+    svg {
+      position: absolute;
+      z-index: 1000;
+      top: 15px;
+      left: 18px;
+    }
+  }
+  input {
+    width: 250px;
+    height: 45px;
+    padding: 0 46px;
+    border: 1px solid #F3F3F3;
+    border-radius: 10px;
+    &::placeholder {
+      color: #c4c4c4;
+    }
+  }
+}

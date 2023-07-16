@@ -1,0 +1,23 @@
+.menu {
+  width: 196px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & > * {
+    cursor: pointer;
+    height: 100%;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &Cart {
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 14px;
+      line-height: 17px;
+      padding-left: 10px;
+    }
+  }
+}

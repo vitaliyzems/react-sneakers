@@ -1,0 +1,21 @@
+.backBtn {
+  width: 245px;
+  height: 55px;
+  background: #9DD458;
+  border: none;
+  border-radius: 18px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  position: relative;
+  cursor: pointer;
+  svg {
+    position: absolute;
+    top: 21px;
+    left: 25px;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}

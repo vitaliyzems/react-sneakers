@@ -1,0 +1,51 @@
+@import-normalize;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: #E7F6FF;
+}
+
+.scrollLock {
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 1080px;
+  margin: 50px auto;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+hr {
+  opacity: .3;
+}
+
+.cartBg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: rgba($color: #000000, $alpha: .5);
+}
+
+#cartHidden {
+  display: none;
+}

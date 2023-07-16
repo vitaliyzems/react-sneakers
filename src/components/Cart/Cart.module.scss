@@ -1,0 +1,131 @@
+#cartHidden {
+  display: none;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 83px;
+  }
+}
+
+.cart {
+  width: 385px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 10000;
+  padding: 30px;
+  &Full {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
+  &Title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  &Items {
+    height: 100%;
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, 120px);
+    grid-gap: 20px;
+    overflow: overlay;
+  }
+  &Total,
+  &Tax {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 19px;
+    div {
+      flex: 1;
+      margin: 0 8px 4px;
+      border-bottom: 1px dashed #DFDFDF;
+    }
+  }
+  &Tax {
+    margin: 20px 0 24px;
+  }
+  &OrderBtn {
+    position: relative;
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 18px;
+    background: #9DD458;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+    svg {
+      position: absolute;
+      top: 21px;
+      right: 25px;
+    }
+  }
+  &Empty {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div {
+      width: 285px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h5 {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        padding: 21px 0 9px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        opacity: .4;
+        text-align: center;
+      }
+      button {
+        margin-top: 40px;
+        width: 245px;
+        height: 55px;
+        background: #9DD458;
+        border: none;
+        border-radius: 18px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        position: relative;
+        cursor: pointer;
+        svg {
+          position: absolute;
+          top: 21px;
+          left: 25px;
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
