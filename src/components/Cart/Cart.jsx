@@ -1,9 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
-import { clearCart, closeCart } from "../../store/cartSlice";
-import { addOrder, confirmOrder } from "../../store/orderSlice";
-import { CartItem } from "../CartItem/CartItem";
-import { EmptyPlaceholder } from "../EmptyPlaceholder/EmptyPlaceholder";
-import style from "./Cart.module.scss";
+import { useDispatch, useSelector } from 'react-redux';
+import { clearCart, closeCart } from '../../store/cartSlice';
+import { addOrder, confirmOrder } from '../../store/orderSlice';
+import { CartItem } from '../CartItem/CartItem';
+import { EmptyPlaceholder } from '../EmptyPlaceholder/EmptyPlaceholder';
+import style from './Cart.module.scss';
 
 export const Cart = () => {
   const { cart, total } = useSelector((state) => state.cart);
@@ -13,7 +13,11 @@ export const Cart = () => {
 
   const closeCartAction = () => {
     dispatch(closeCart());
-    document.body.className = "";
+    document.body.className = '';
+  };
+
+  const clearCartAction = () => {
+    dispatch(clearCart());
   };
 
   const createOrder = () => {
@@ -25,20 +29,23 @@ export const Cart = () => {
   const tax = (total * 5) / 100;
 
   const emptyContent = {
-    img: "/img/emptyCart.png",
-    title: "Корзина пустая",
-    text: "Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.",
+    img: '/img/emptyCart.png',
+    title: 'Корзина пустая',
+    text: 'Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.',
   };
 
   const orderContent = {
-    img: "/img/orderConfirm.png",
-    title: "Заказ оформлен!",
-    text: "Ваш заказ #18 скоро будет передан курьерской доставке",
+    img: '/img/orderConfirm.png',
+    title: 'Заказ оформлен!',
+    text: 'Ваш заказ #18 скоро будет передан курьерской доставке',
   };
 
   return (
     <div id="cart" className={style.cart}>
-      <h3 className={style.cartTitle}>Корзина</h3>
+      <div className={style.cartTop}>
+        <h3 className={style.cartTitle}>Корзина</h3>
+        <button onClick={clearCartAction}>Очистить</button>
+      </div>
       {order ? (
         <div className={style.wrapper}>
           <EmptyPlaceholder content={orderContent} action={closeCartAction} />

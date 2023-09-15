@@ -35,9 +35,6 @@ const cartSlice = createSlice({
         }
         return item;
       });
-      // const cart = state.cart.filter((item) => item.id !== id);
-      // state.total -= price * quantity;
-      // state.cart = cart;
     },
     clearCart(state) {
       state.cart = [];
